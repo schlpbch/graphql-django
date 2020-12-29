@@ -18,10 +18,28 @@ Query Users
 
 ```graphql
 query {
-  links {
+  users {
     id
     username
     password
+  }
+}
+```
+
+Query Votes
+
+```graphql
+query {
+  votes {
+    id
+    user {
+      id
+      username
+    }
+    link {
+      id
+      url
+    }
   }
 }
 ```
@@ -76,5 +94,24 @@ mutation {
       email
     }
   }
+}
+```
+
+Create Vote
+
+```graphql
+mutation {
+  createVote(linkId: 1) {
+    user {
+      id
+      username
+      email
+    }
+    link {
+      id
+      description
+      url
+    }
+  } 
 }
 ```
