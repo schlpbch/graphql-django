@@ -4,10 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "==2.1.4"
-graphene-django = "==2.2.0"
-django-filter = "==2.0.0"
-django-graphql-jwt = "==0.1.5"
+django = "<3.0.0"
+graphene-django = "==2.14.0"
+django-filter = "==2.4.0"
 django-admin = "*"
 
 [dev-packages]
