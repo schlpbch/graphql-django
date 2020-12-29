@@ -43,6 +43,24 @@ mutation {
 }
 ```
 
+```graphql
+mutation {
+  createLink(
+    url: "https://github.com/schlpbch",
+    description: "Schlpbch's GitHub"
+  ) {
+    id
+    description
+    url
+    postedBy {
+      id
+      username
+      email
+    }
+  }
+}
+```
+
 Create user:
 
 ```graphql
