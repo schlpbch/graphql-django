@@ -2,6 +2,8 @@
 
 ## Query
 
+Query links
+
 ```graphql
 query {
   links {
@@ -12,7 +14,21 @@ query {
 }
 ```
 
+Query Users
+
+```graphql
+query {
+  links {
+    id
+    username
+    password
+  }
+}
+```
+
 ## Mutate
+
+Create link:
 
 ```graphql
 mutation {
@@ -23,6 +39,24 @@ mutation {
     id
     description
     url
+  }
+}
+```
+
+Create user:
+
+```graphql
+mutation {
+  createUser(
+    username: "schlpbch",
+    email: "schlpbch@gmail.com",
+    password: "424242"
+  ) {
+    user {
+      id
+      username
+      email
+    }
   }
 }
 ```
