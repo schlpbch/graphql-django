@@ -44,6 +44,18 @@ query {
 }
 ```
 
+Query with filter
+
+```graphql
+query {
+  links(search: "schlpbch") {
+    id
+    description
+    url
+  }
+}
+```
+
 ## Mutate
 
 Create link:
